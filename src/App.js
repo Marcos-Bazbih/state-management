@@ -1,10 +1,11 @@
 import './App.css';
-import Massage from './components/Massage/Massage.component';
+import AppRouter from './App-Router';
+
 
 function App() {
   return (
     <div className="App">
-      <Massage />
+      <AppRouter />
     </div>
   );
 }

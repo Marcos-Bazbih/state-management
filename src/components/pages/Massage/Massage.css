@@ -1,0 +1,28 @@
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.state{
+    padding: 5px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.dispatchBtn{
+    cursor: pointer;
+    font-weight: 900;
+    color: black;
+    background: goldenrod;
+    border: 2px solid black;
+    padding: 5px;
+    transition: 0.1s ease-in-out;
+}
+.dispatchBtn:hover{
+    color: goldenrod;
+    background: black; 
+    border-color: goldenrod;
+}
