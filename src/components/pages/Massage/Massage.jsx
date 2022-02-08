@@ -1,29 +1,30 @@
 import "./Massage.css";
-import { useReducer } from "react";
-import MassageReducer from "../../../Reducers/massage-reducer";
-import { SuccessAction, FailAction, PendingAction } from "../../../Actions/massage-actions";
+import { useContext } from "react";
+// import { SuccessAction } from "../../../Actions/massage-actions";
+import { MassageContext } from "../../../Context/massage-context";
 
 
 const Massage = () => {
-    const [state, dispatch] = useReducer(MassageReducer, "massage");
+    const { state } = useContext(MassageContext);
 
-    const SuccessDispatch = () => {
-        dispatch(SuccessAction());
-    };
-    // const FailDispatch = () => {
-    //     dispatch(FailAction());
-    // };
-    // const PendingDispatch = () => {
-    //     dispatch(PendingAction());
+    // const SendDispatch = (e) => {
+    //     dispatch(SuccessAction(e.target.name));
     // };
 
     return (
-        <div className="main">
-            <h1>Massage Component</h1>
-            <button className="dispatchBtn" onClick={SuccessDispatch}>Success</button>
-            {/* <button className="dispatchBtn" onClick={FailDispatch}>Fail</button> */}
-            {/* <button className="dispatchBtn" onClick={PendingDispatch}>Pending</button> */}
-            <h1 className="state">{state}</h1>
+        <div className="massage">
+            <h1>Massage</h1>
+            <div className="btn-container">
+                {/* <button name="success" className="dispatchBtn" onClick={SendDispatch}>SUCCESS</button>
+                <button name="primary" className="dispatchBtn" onClick={SendDispatch}>PRIMARY</button>
+                <button name="secondary" className="dispatchBtn" onClick={SendDispatch}>SECONDARY</button>
+                <button name="error" className="dispatchBtn" onClick={SendDispatch}>ERROR</button>
+                <button name="info" className="dispatchBtn" onClick={SendDispatch}>INFO</button>
+                <button name="warning" className="dispatchBtn" onClick={SendDispatch}>WARNING</button> */}
+            </div>
+
+            {<h1>{state.msgText}</h1> || <div></div>}
+
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import { SUCCESS, PRIMARY, SECONDARY, ERROR, INFO, WARNING } from "./massage-types";
+import { SUCCESS, PRIMARY, SECONDARY, ERROR, INFO, WARNING, SHOW } from "./massage-types";
 
 export const SuccessAction = (value) => {
     return {
@@ -33,6 +33,12 @@ export const InfoAction = (value) => {
 export const WarningAction = (value) => {
     return {
         type: WARNING,
+        payload: value
+    }
+}
+export const ShowAction = (value) => {
+    return {
+        type: SHOW,
         payload: value
     }
 }

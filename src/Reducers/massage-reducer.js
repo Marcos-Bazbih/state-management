@@ -1,20 +1,21 @@
-import { SUCCESS, PRIMARY, SECONDARY, ERROR, INFO, WARNING } from "../Actions/massage-types";
+import { SUCCESS, PRIMARY, SECONDARY, ERROR, INFO, WARNING, SHOW } from "../Actions/massage-types";
 
 const MassageReducer = (state = "massage", action) => {
     switch (action.type) {
         case SUCCESS:
-            return 'success';
+            return action.payload;
         case PRIMARY:
-            return 'primary';
+            return action.payload;
         case SECONDARY:
-            return 'secondary';
+            return action.payload;
         case ERROR:
-            return 'error';
+            return action.payload;
         case INFO:
-            return 'info';
+            return action.payload;
         case WARNING:
-            return 'warning';
-
+            return action.payload;
+        case SHOW:
+            return { ...action.payload, isOpen: true };
         default:
             return state;
     };
