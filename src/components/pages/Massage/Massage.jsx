@@ -22,7 +22,6 @@ const Massage = () => {
                 <button name="info" className="dispatchBtn" onClick={SendDispatch}>INFO</button>
                 <button name="warning" className="dispatchBtn" onClick={SendDispatch}>WARNING</button> */}
             </div>
-
             {<h1>{state.msgText}</h1> || <div></div>}
 
         </div>
